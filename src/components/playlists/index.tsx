@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Avatar from "../common/avatar";
+import { useState } from "react";
 
 const Routes = () => {
   const routes = ["Home", "Browse", "Radio"];
@@ -106,24 +107,24 @@ const NewReleases = () => {
         {newReleases.map(({ imgSrc, artistName }, index) => {
           return (
             <div
-            key={`${artistName}-${index}`}
-            className="flex  justify-start items-center   "
-          >
-            <Avatar
-              src={imgSrc}
-              width={70}
-              height={70}
-              borderRadius="rounded-xl"
-            />
-            <div className="ml-2">
-            <p className="text-indigo-900 text-sm font-semibold cursor-pointer">
-              {artistName}
-            </p>
-            <p className="text-gray-400 text-xs font-semibold cursor-pointer">
-              {artistName}
-            </p>
+              key={`${artistName}-${index}`}
+              className="flex  justify-start items-center   "
+            >
+              <Avatar
+                src={imgSrc}
+                width={70}
+                height={70}
+                borderRadius="rounded-xl"
+              />
+              <div className="ml-2">
+                <p className="text-indigo-900 text-sm font-semibold cursor-pointer">
+                  {artistName}
+                </p>
+                <p className="text-gray-400 text-xs font-semibold cursor-pointer">
+                  {artistName}
+                </p>
+              </div>
             </div>
-          </div>
           );
         })}
       </div>
@@ -132,6 +133,7 @@ const NewReleases = () => {
 };
 
 const Trending = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null); // Track the index of the hovered item
   const trending = [
     { imgSrc: "/sample-song.png", artistName: "Ryan Hatch" },
     { imgSrc: "/sample-song.png", artistName: "Calvin Kay" },
@@ -144,36 +146,62 @@ const Trending = () => {
     { imgSrc: "/sample-song.png", artistName: "Andre Davis" },
     { imgSrc: "/sample-song.png", artistName: "Jay Lewis" },
   ];
+
   return (
-    <div className="pr-8 w-[30%] ">
-      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4 ">
+    <div className="pr-8 w-[30%]">
+      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4">
         New Releases
       </p>
-      <div >
-        {trending.map(({ imgSrc, artistName }, index) => {
-          return (
-            <div
-              key={`${artistName}-${index}`}
-              className="flex  justify-start items-center  rounded-xl bg-white px-6 py-4 mb-4"
-            >
-              <Avatar
-                src={imgSrc}
-                width={50}
-                height={50}
-                borderRadius="rounded-full"
-              />
-              <div className="ml-4">
-              <p className="text-indigo-900 text-sm font-semibold cursor-pointer">
-                {artistName}
-              </p>
-              <p className="text-gray-400  text-xs font-semibold cursor-pointer">
-                {artistName}
-              </p>
-              <p>show on scroll</p>
+      <div>
+        {trending.map(({ imgSrc, artistName }, index) => (
+          <div
+            key={`${artistName}-${index}`}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            className={`flex cursor-pointer justify-start items-center rounded-xl px-6 py-4 mb-4 transition-colors duration-300 ease-in-out ${
+              hoveredIndex === index ? "bg-indigo-800" : "bg-white"
+            }`}
+          >
+            <Avatar
+              src={imgSrc}
+              width={70}
+              height={70}
+              borderRadius="rounded-full"
+            />
+            <div className="ml-4 flex justify-between items-between w-[100%] ">
+              <div>
+                <p
+                  className={` ${
+                    hoveredIndex === index ? "text-white" : "text-indigo-900"
+                  } text-sm font-semibold cursor-pointer`}
+                >
+                  {artistName}
+                </p>
+                <p
+                  className={` ${
+                    hoveredIndex === index ? "text-white" : "text-gray-400"
+                  } text-xs font-semibold cursor-pointer`}
+                >
+                  {artistName}
+                </p>
               </div>
+              {hoveredIndex === index && (
+                <div
+                  className=" transition-opacity duration-300 ease-in-out"
+                  style={{ opacity: hoveredIndex === index ? 1 : 0 }}
+                >
+                  <Image
+                    className={`w-6 h-6  `}
+                    alt="Arrow down"
+                    width={30}
+                    height={30}
+                    src="/3-dot.svg"
+                  />
+                </div>
+              )}
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -192,7 +220,7 @@ export default function Playlist() {
         <RecommendedArtists />
         <div className="flex ">
           <NewReleases />
-          <Trending/>
+          <Trending />
         </div>
       </div>
     </div>
