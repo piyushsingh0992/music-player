@@ -57,7 +57,9 @@ const RecommendedArtists = () => {
 
   return (
     <div className="px-8">
-      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4">Recommended Artists</p>
+      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4">
+        Recommended Artists
+      </p>
       <div className="flex space-x-12 overflow-x-auto recommended-artist-scrollbar-hide">
         {artistList.map(({ imgSrc, artistName }, index) => {
           return (
@@ -65,19 +67,25 @@ const RecommendedArtists = () => {
               key={`${artistName}-${index}`}
               className="flex-shrink-0 flex flex-col justify-start items-center"
             >
-              <Avatar src={imgSrc} width="160" height="200" borderRadius="rounded-2xl" />
-              <p className="pt-4 text-indigo-900 text-xs font-semibold cursor-pointer">{artistName}</p>
+              <Avatar
+                src={imgSrc}
+                width="160"
+                height="200"
+                borderRadius="rounded-2xl"
+              />
+              <p className="pt-4 text-indigo-900 text-xs font-semibold cursor-pointer">
+                {artistName}
+              </p>
             </div>
           );
         })}
       </div>
-</div>
-    
+    </div>
   );
 };
 
 const NewReleases = () => {
-  const newReleases= [
+  const newReleases = [
     { imgSrc: "/sample-song.png", artistName: "Ryan Hatch" },
     { imgSrc: "/sample-song.png", artistName: "Calvin Kay" },
     { imgSrc: "/sample-song.png", artistName: "Amber Rae" },
@@ -90,18 +98,32 @@ const NewReleases = () => {
     { imgSrc: "/sample-song.png", artistName: "Jay Lewis" },
   ];
   return (
-    <div className="px-8">
-      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4">New Releases</p>
-      <div className="grid grid-cols-3 gap-12 overflow-auto">
+    <div className="pl-8 w-[70%] ">
+      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4 ">
+        New Releases
+      </p>
+      <div className="grid grid-cols-3 gap-6 overflow-auto ">
         {newReleases.map(({ imgSrc, artistName }, index) => {
           return (
             <div
-              key={`${artistName}-${index}`}
-              className="flex flex-col justify-start items-center space-y-4"
-            >
-              <Avatar src={imgSrc} width={160} height={200} borderRadius="rounded-2xl" />
-              <p className="text-indigo-900 text-xs font-semibold cursor-pointer">{artistName}</p>
+            key={`${artistName}-${index}`}
+            className="flex  justify-start items-center   "
+          >
+            <Avatar
+              src={imgSrc}
+              width={70}
+              height={70}
+              borderRadius="rounded-xl"
+            />
+            <div className="ml-2">
+            <p className="text-indigo-900 text-sm font-semibold cursor-pointer">
+              {artistName}
+            </p>
+            <p className="text-gray-400 text-xs font-semibold cursor-pointer">
+              {artistName}
+            </p>
             </div>
+          </div>
           );
         })}
       </div>
@@ -110,7 +132,7 @@ const NewReleases = () => {
 };
 
 const Trending = () => {
-  const trending= [
+  const trending = [
     { imgSrc: "/sample-song.png", artistName: "Ryan Hatch" },
     { imgSrc: "/sample-song.png", artistName: "Calvin Kay" },
     { imgSrc: "/sample-song.png", artistName: "Amber Rae" },
@@ -123,17 +145,32 @@ const Trending = () => {
     { imgSrc: "/sample-song.png", artistName: "Jay Lewis" },
   ];
   return (
-    <div className="px-8">
-      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4">New Releases</p>
-      <div className="grid grid-cols-3 gap-12 overflow-auto">
+    <div className="pr-8 w-[30%] ">
+      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4 ">
+        New Releases
+      </p>
+      <div >
         {trending.map(({ imgSrc, artistName }, index) => {
           return (
             <div
               key={`${artistName}-${index}`}
-              className="flex flex-col justify-start items-center space-y-4"
+              className="flex  justify-start items-center  rounded-xl bg-white px-6 py-4 mb-4"
             >
-              <Avatar src={imgSrc} width={160} height={200} borderRadius="rounded-2xl" />
-              <p className="text-indigo-900 text-xs font-semibold cursor-pointer">{artistName}</p>
+              <Avatar
+                src={imgSrc}
+                width={50}
+                height={50}
+                borderRadius="rounded-full"
+              />
+              <div className="ml-4">
+              <p className="text-indigo-900 text-sm font-semibold cursor-pointer">
+                {artistName}
+              </p>
+              <p className="text-gray-400  text-xs font-semibold cursor-pointer">
+                {artistName}
+              </p>
+              <p>show on scroll</p>
+              </div>
             </div>
           );
         })}
@@ -142,23 +179,22 @@ const Trending = () => {
   );
 };
 
-
-
 export default function Playlist() {
   // This is mock data and could be replaced with your actual data fetching logic
 
   return (
     <div className="bg-gray-200 w-[80vw]  h-[85vh] ">
-    <div className="flex justify-between items-center pt-10 h-[20%]">
-      <Routes />
-      <Search />
+      <div className="flex justify-between items-center pt-10 h-[20%]">
+        <Routes />
+        <Search />
+      </div>
+      <div className="h-[80%] overflow-x-auto">
+        <RecommendedArtists />
+        <div className="flex ">
+          <NewReleases />
+          <Trending/>
+        </div>
+      </div>
     </div>
-    <div className= "h-[80%] overflow-x-auto">
-    <RecommendedArtists />
-    <div>
-      <NewReleases />
-    </div>
-    </div>
-  </div>
   );
 }
