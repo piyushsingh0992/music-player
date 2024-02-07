@@ -29,7 +29,7 @@ const Header = () => {
         width="36"
         height="36"
       />
-      <p className="ml-4 text-indigo-700 text-xs font-semibold">
+      <p className="ml-4 text-indigo-900  text-xs font-semibold">
         Charlie-George baker
       </p>
       <Image
@@ -48,7 +48,7 @@ export default function Navbar() {
   
 
   return (
-    <div className="bg-gray-100 w-[25vw] ">
+    <div className="bg-gray-100 w-[20vw]   h-[85vh] overflow-x-auto">
       <div>
         <Header />
         <Index
