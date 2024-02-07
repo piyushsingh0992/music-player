@@ -91,9 +91,42 @@ const NewReleases = () => {
   ];
   return (
     <div className="px-8">
-      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4">Recommended Artists</p>
+      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4">New Releases</p>
       <div className="grid grid-cols-3 gap-12 overflow-auto">
         {newReleases.map(({ imgSrc, artistName }, index) => {
+          return (
+            <div
+              key={`${artistName}-${index}`}
+              className="flex flex-col justify-start items-center space-y-4"
+            >
+              <Avatar src={imgSrc} width={160} height={200} borderRadius="rounded-2xl" />
+              <p className="text-indigo-900 text-xs font-semibold cursor-pointer">{artistName}</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+const Trending = () => {
+  const trending= [
+    { imgSrc: "/sample-song.png", artistName: "Ryan Hatch" },
+    { imgSrc: "/sample-song.png", artistName: "Calvin Kay" },
+    { imgSrc: "/sample-song.png", artistName: "Amber Rae" },
+    { imgSrc: "/sample-song.png", artistName: "Andre Davis" },
+    { imgSrc: "/sample-song.png", artistName: "Jay Lewis" },
+    { imgSrc: "/sample-song.png", artistName: "Ryan Hatch" },
+    { imgSrc: "/sample-song.png", artistName: "Calvin Kay" },
+    { imgSrc: "/sample-song.png", artistName: "Amber Rae" },
+    { imgSrc: "/sample-song.png", artistName: "Andre Davis" },
+    { imgSrc: "/sample-song.png", artistName: "Jay Lewis" },
+  ];
+  return (
+    <div className="px-8">
+      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4">New Releases</p>
+      <div className="grid grid-cols-3 gap-12 overflow-auto">
+        {trending.map(({ imgSrc, artistName }, index) => {
           return (
             <div
               key={`${artistName}-${index}`}
@@ -115,14 +148,16 @@ export default function Playlist() {
   // This is mock data and could be replaced with your actual data fetching logic
 
   return (
-    <div className="bg-gray-200 w-[80vw]  h-[85vh] overflow-x-auto">
-    <div className="flex justify-between items-center pt-10">
+    <div className="bg-gray-200 w-[80vw]  h-[85vh] ">
+    <div className="flex justify-between items-center pt-10 h-[20%]">
       <Routes />
       <Search />
     </div>
+    <div className= "h-[80%] overflow-x-auto">
     <RecommendedArtists />
     <div>
       <NewReleases />
+    </div>
     </div>
   </div>
   );
