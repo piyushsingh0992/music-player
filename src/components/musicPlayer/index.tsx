@@ -2,16 +2,32 @@ import React from "react";
 import Image from "next/image";
 
 // ProgressBar component for the progress bar
-const ProgressBar = ({ currentTime, totalTime }:any) => (
-  <div className="flex items-center">
-    <span className="text-xs text-gray-400 font-light">{currentTime}</span>
-    <div className="overflow-hidden relative flex-1 mx-2 rounded">
-      <div className="border-b-4 border-gray-400 rounded"></div>
-      <div className="absolute inset-x-0 top-0 -translate-x-48 border-b-4 border-indigo-700 rounded transform hover:border-indigo-500"></div>
+const ProgressBar = ({ currentTime, totalTime }: any) => {
+  // First, convert currentTime and totalTime to seconds for easier calculation
+  const currentTimeInSeconds = currentTime
+    .split(":")
+    .reduce((acc: number, time: number) => 60 * acc + +time, 0);
+  const totalTimeInSeconds = totalTime
+    .split(":")
+    .reduce((acc: number, time: number) => 60 * acc + +time, 0);
+
+  // Then, calculate the progress percentage
+  const progressPercentage = (currentTimeInSeconds / totalTimeInSeconds) * 100;
+
+  return (
+    <div className="flex items-center ">
+      <span className="text-xs text-gray-400 font-light">{currentTime}</span>
+
+      <div className="w-full bg-gray-300 rounded-full h-1.5 mx-4">
+        <div
+          className="bg-indigo-700 h-1.5 rounded-full hover:bg-indigo-500 cursor-pointer "
+          style={{ width: `${progressPercentage}%` }}
+        ></div>
+      </div>
+      <span className="text-xs text-gray-400 font-light">{totalTime}</span>
     </div>
-    <span className="text-xs text-gray-400 font-light">{totalTime}</span>
-  </div>
-);
+  );
+};
 
 const Player = () => {
   return (
