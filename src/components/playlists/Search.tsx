@@ -13,8 +13,8 @@ const Search = () => {
         <Image
           src="/search-icon.svg"
           alt="Search"
-          width={16} // Adjust based on your design. This could be 24 for md sizes if you want it bigger.
-          height={16} // Adjust based on your design. This could be 24 for md sizes if you want it bigger.
+          width={16} 
+          height={16} 
           className="text-indigo-700"
         />
       </div>

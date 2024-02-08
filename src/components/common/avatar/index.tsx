@@ -5,14 +5,14 @@ interface AvatarProps {
   src: string;
   width: number | `${number}`;
   height: number | `${number}`;
-  borderRadius?: string; // Optional prop for border radius
+  borderRadius?: string; 
 }
 
 const Avatar: React.FC<AvatarProps> = ({
   src,
   width,
   height,
-  borderRadius = "rounded-full", // Default value for borderRadius
+  borderRadius = "rounded-full",
 }) => {
   return (
     <div>
@@ -21,7 +21,7 @@ const Avatar: React.FC<AvatarProps> = ({
         alt="Avatar"
         width={width}
         height={height}
-        className={` ${borderRadius} overflow-hidden`} // Removed width and height classes as they are not dynamic
+        className={` ${borderRadius} overflow-hidden`}
       />
     </div>
   );

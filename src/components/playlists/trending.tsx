@@ -3,7 +3,7 @@ import Avatar from "../common/avatar";
 import { useState } from "react";
 
 const Trending = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null); // Track the index of the hovered item
+  const [hoveredIndex, setHoveredIndex] = useState(null); 
   const trending = [
     { imgSrc: "/artists/artist-1.png", artistName: "Ryan Hatch" },
     { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },

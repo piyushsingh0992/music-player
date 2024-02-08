@@ -52,7 +52,7 @@ const Right = () => {
   );
 };
 export default function Footer() {
-  //
+
 
   return (
     <div className="bg-gray-50 flex h-[15vh] w-[100vw] px-8 z-20">
