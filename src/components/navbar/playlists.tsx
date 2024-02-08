@@ -8,7 +8,7 @@ const Playlists = ({ heading, subHeading }:{ heading:string, subHeading:Array<st
         return (
           <p
             key={currenttext}
-            className=" pl-12 text-xs font-semibold cursor-pointer hover-fade-effect text-indigo-900 py-4 hover:text-indigo-600 relative z-10"
+            className=" pl-12 text-xs font-semibold cursor-pointer hover-fade-effect text-indigo-900 py-4 hover:text-indigo-600 relative "
           >
             {currenttext}
           </p>

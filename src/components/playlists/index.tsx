@@ -58,7 +58,7 @@ const RecommendedArtists = () => {
 
   return (
     <div className="px-8">
-      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4">
+      <p className="text-indigo-900 text-lg font-semibold cursor-pointer py-4">
         Recommended Artists
       </p>
       <div className="flex space-x-12 overflow-x-auto recommended-artist-scrollbar-hide">
@@ -110,10 +110,10 @@ const NewReleases = () => {
   ];
   return (
     <div className="pl-8 w-[70%] ">
-      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4 ">
+      <p className="text-indigo-900 text-lg font-semibold cursor-pointer py-4 ">
         New Releases
       </p>
-      <div className="grid grid-cols-3 gap-6 overflow-auto ">
+      <div className="grid grid-cols-3 gap-6 overflow-auto mt-4">
         {newReleases.map(({ imgSrc, artistName }, index) => {
           return (
             <div
@@ -169,16 +169,16 @@ const Trending = () => {
 
   return (
     <div className="pr-8 w-[30%]">
-      <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4">
+      <p className="text-indigo-900 text-lg font-semibold cursor-pointer py-4">
         Trending
       </p>
-      <div>
+      <div className="mt-2">
         {trending.map(({ imgSrc, artistName }, index) => (
           <div
             key={`${artistName}-${index}`}
             onMouseEnter={() => setHoveredIndex(index as any)}
             onMouseLeave={() => setHoveredIndex(null)}
-            className={`flex cursor-pointer justify-start items-center rounded-xl px-6 py-4 mb-4 transition-colors duration-300 ease-in-out ${
+            className={`flex cursor-pointer justify-start items-center rounded-xl px-6 py-4 mb-4 transition-colors duration-300 ease-in-out drop-shadow-md  ${
               hoveredIndex === index ? "bg-indigo-800" : "bg-white"
             }`}
           >
@@ -233,14 +233,14 @@ export default function Playlist() {
   // This is mock data and could be replaced with your actual data fetching logic
 
   return (
-    <div className="bg-gray-200 w-[80vw]  h-[85vh] ">
+    <div className="bg-gray-200 w-[80vw]  h-[85vh]  ">
       <div className="flex justify-between items-center h-[20%]">
         <Routes />
         <Search />
       </div>
       <div className="h-[80%] overflow-x-auto">
         <RecommendedArtists />
-        <div className="flex ">
+        <div className="flex  mt-8">
           <NewReleases />
           <Trending />
         </div>

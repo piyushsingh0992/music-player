@@ -6,7 +6,7 @@ export default function Navbar() {
  
 
   return (
-    <div className="bg-gray-100 w-[20vw]   h-[85vh] overflow-x-auto">
+    <div className="bg-gray-100 w-[20vw]   h-[85vh] overflow-x-auto ">
       <div>
         <Header avatar={"/avatar.png"}name={" Charlie-George baker"} />
         <Playlists
