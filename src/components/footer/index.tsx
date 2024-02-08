@@ -57,7 +57,7 @@ export default function Footer() {
   // This is mock data and could be replaced with your actual data fetching logic
 
   return (
-    <div className="bg-gray-50 flex h-[15vh] w-[100vw] px-8">
+    <div className="bg-gray-50 flex h-[15vh] w-[100vw] px-8 z-20">
       <div className="w-[100%]  flex justify-between items-center">
         <Left />
         <div className="w-[40%]">

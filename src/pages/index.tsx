@@ -7,7 +7,7 @@ export default function MusicPlayer() {
 
   return (
     <div>
-      <div className="flex h-[85vh]">
+      <div className="flex h-[85vh]  fade-effect">
         <Navbar />
         <Playlist />
       </div>

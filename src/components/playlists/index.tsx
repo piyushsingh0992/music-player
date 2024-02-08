@@ -57,8 +57,8 @@ const RecommendedArtists = () => {
   ];
 
   return (
-    <div className="px-8">
-      <p className="text-indigo-900 text-lg font-semibold cursor-pointer py-4">
+    <div className="px-8  mr-8">
+      <p className="text-indigo-900 text-lg font-semibold cursor-pointer py-4 ">
         Recommended Artists
       </p>
       <div className="flex space-x-12 overflow-x-auto recommended-artist-scrollbar-hide">
@@ -238,9 +238,9 @@ export default function Playlist() {
         <Routes />
         <Search />
       </div>
-      <div className="h-[80%] overflow-x-auto">
+      <div className="h-[80%] overflow-x-auto mr-8">
         <RecommendedArtists />
-        <div className="flex  mt-8">
+        <div className="flex  mt-8 mr-8">
           <NewReleases />
           <Trending />
         </div>

@@ -17,3 +17,52 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+
+.navbar-scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.navbar-scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+.fade-effect {
+  --mask: linear-gradient(to bottom, 
+      rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 93%, 
+      rgba(0,0,0, 0.1) 99%, rgba(0,0,0, 0.1) 0
+  ) 100% 100% / 100% 100% repeat-x;
+  
+
+  -webkit-mask: var(--mask); 
+  mask: var(--mask);
+  
+}
+
+.right-shadow {
+  box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+}
+
+
+.fade-out-effect {
+  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+  /* Other styling for your container */
+}
+
+/* This will create a shadow at the end of the container */
+.fade-out-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px; /* Width of the shadow effect */
+  height: 100%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent);
+  pointer-events: none; /* So that it doesn't interfere with scrolling or clicking */
+}
+
+
+
