@@ -1,4 +1,4 @@
-const Playlists = ({ heading, subHeading }:{ heading:string, subHeading:Array<string> } ) => {
+const List = ({ heading, subHeading }:{ heading:string, subHeading:Array<string> } ) => {
   return (
     <div className=" pt-8">
       <p className="text-gray-400  text-sm pl-6 pb-4 tracking-wide">
@@ -18,4 +18,4 @@ const Playlists = ({ heading, subHeading }:{ heading:string, subHeading:Array<st
   );
 };
 
-export default Playlists;
+export default List

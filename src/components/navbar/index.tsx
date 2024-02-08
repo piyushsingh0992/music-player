@@ -1,6 +1,6 @@
 
 import Header from "./header";
-import Playlists from "./playLists"
+import Playlists from "./list"
 
 export default function Navbar() {
  
