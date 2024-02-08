@@ -156,7 +156,7 @@ const Trending = () => {
         {trending.map(({ imgSrc, artistName }, index) => (
           <div
             key={`${artistName}-${index}`}
-            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseEnter={() => setHoveredIndex(index as any)}
             onMouseLeave={() => setHoveredIndex(null)}
             className={`flex cursor-pointer justify-start items-center rounded-xl px-6 py-4 mb-4 transition-colors duration-300 ease-in-out ${
               hoveredIndex === index ? "bg-indigo-800" : "bg-white"

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 // ProgressBar component for the progress bar
-const ProgressBar = ({ currentTime, totalTime }) => (
+const ProgressBar = ({ currentTime, totalTime }:any) => (
   <div className="flex items-center">
     <span className="text-xs text-gray-400 font-light">{currentTime}</span>
     <div className="overflow-hidden relative flex-1 mx-2 rounded">

@@ -7,34 +7,23 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-
     letterSpacing: {
-     
       wide: '0.25em',
-     
     },
     extend: {
-
-      extend: {
-        colors: {
-         gray: {
+      colors: {
+        gray: {
           '50': '#f8f8f9',
           '100': '#f3f7f8',
           // Define other shades of blue as needed
           '200': '#f2f2f3',
-          },
-
-         
         },
       },
-    
     },
   },
-
-  
   plugins: [
     // Add our custom plugin for the hover effect
-    plugin(function({ addUtilities, theme, addComponents }) {
+    plugin(function({ addUtilities, theme, addComponents }: any) {
       const newUtilities = {
         '.hover-fade-effect::before': {
           content: '""',
@@ -61,6 +50,5 @@ const config: Config = {
       addUtilities(newUtilities, ['responsive', 'hover']);
     }),
   ],
-
 };
 export default config;
