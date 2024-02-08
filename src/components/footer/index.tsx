@@ -11,7 +11,7 @@ const Left = () => {
     `}
     >
       <Avatar
-        src={"/sample-song.png"}
+        src={"/artists/artist-1.png"}
         width={80}
         height={80}
         borderRadius="rounded-full"
