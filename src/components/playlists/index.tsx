@@ -150,7 +150,7 @@ const Trending = () => {
   return (
     <div className="pr-8 w-[30%]">
       <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4">
-        New Releases
+       Trending
       </p>
       <div>
         {trending.map(({ imgSrc, artistName }, index) => (
