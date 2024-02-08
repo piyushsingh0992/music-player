@@ -4,7 +4,7 @@ const Search = () => {
   return (
     <div className="flex items-center h-10 rounded-full bg-white shadow-md mr-8">
       <input
-        className="flex-grow px-4 rounded-l-full text-sm focus:outline-none"
+        className="flex-grow px-4 rounded-l-full text-sm focus:outline-none placeholder-indigo-700 text-indigo-700"
         type="text"
         placeholder="Search"
       />
