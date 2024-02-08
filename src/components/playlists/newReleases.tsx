@@ -1,7 +1,4 @@
-
 import Avatar from "../common/avatar";
-
-
 
 const NewReleases = () => {
   const newReleases = [
@@ -60,5 +57,4 @@ const NewReleases = () => {
   );
 };
 
-
-export default NewReleases
+export default NewReleases;

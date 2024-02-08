@@ -2,9 +2,6 @@ import React from "react";
 import Image from "next/image";
 import ProgressBar from "./progressBar";
 
-
-
-
 const Player = () => {
   return (
     <div>

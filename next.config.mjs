@@ -2,10 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['daisyui.com'],
+    domains: [],
   },
 };
 
 export default nextConfig;
-
-

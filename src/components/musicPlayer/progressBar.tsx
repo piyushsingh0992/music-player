@@ -7,7 +7,7 @@ interface ProgressBarProps {
 
 const calculateProgressPercentage = (
   currentTime: string,
-  totalTime: string
+  totalTime: string,
 ): number => {
   const timeInSeconds = (time: string): number =>
     time.split(":").reduce((acc, time) => 60 * acc + Number(time), 0);
@@ -24,7 +24,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
 }) => {
   const progressPercentage = calculateProgressPercentage(
     currentTime,
-    totalTime
+    totalTime,
   );
 
   return (

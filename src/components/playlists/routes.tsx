@@ -1,4 +1,3 @@
-
 const Routes = () => {
   const routes = ["Home", "Browse", "Radio"];
   return (
@@ -17,6 +16,4 @@ const Routes = () => {
   );
 };
 
-
-
-export default Routes 
+export default Routes;
