@@ -7,7 +7,7 @@ const Routes = () => {
         return (
           <p
             key={currentText}
-            className=" pl-8  text-indigo-900  text-xs font-semibold cursor-pointer  "
+            className=" pl-8  text-indigo-900  text-xs font-semibold cursor-pointer  flex items-center justify-center"
           >
             {currentText}
           </p>

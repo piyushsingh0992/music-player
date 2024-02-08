@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Search = () => {
   return (
-    <div className="flex mt-6  md:mt-0 items-center h-10 md:h-12 rounded-full bg-white shadow-md mr-2 md:mr-8 ">
+    <div className="flex mt-6  md:mt-0 items-center h-10 md:h-12 rounded-full bg-white shadow-md mr-2 md:mr-8   w-[50%] md:w-fit">
       <input
         className="flex-grow px-4 md:px-4 rounded-l-full text-xs md:text-sm focus:outline-none placeholder-indigo-700 text-indigo-700"
         type="text"
