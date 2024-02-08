@@ -66,3 +66,26 @@ body {
 
 
 
+
+/* For webkit browsers like Chrome, Safari, and newer versions of Edge */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar to your preference */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light grey track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3730a3; /* Deep blue thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3730a3; /* Slightly darker blue on hover for better user interaction */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* You can use "auto", "thin", or "none" */
+  scrollbar-color: #3730a3 #f1f1f1; /* Deep blue thumb and light grey track */
+}

@@ -11,20 +11,7 @@ const Trending = () => {
     { imgSrc: "/artists/artist-4.png", artistName: "Andre Davis" },
     { imgSrc: "/artists/artist-1.png", artistName: "Jay Lewis" },
     { imgSrc: "/artists/artist-2.png", artistName: "Ryan Hatch" },
-    { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },
-    { imgSrc: "/artists/artist-4.png", artistName: "Amber Rae" },
-    { imgSrc: "/artists/artist-1.png", artistName: "Andre Davis" },
-    { imgSrc: "/artists/artist-2.png", artistName: "Jay Lewis" },
-    { imgSrc: "/artists/artist-1.png", artistName: "Ryan Hatch" },
-    { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },
-    { imgSrc: "/artists/artist-2.png", artistName: "Amber Rae" },
-    { imgSrc: "/artists/artist-4.png", artistName: "Andre Davis" },
-    { imgSrc: "/artists/artist-1.png", artistName: "Jay Lewis" },
     { imgSrc: "/artists/artist-2.png", artistName: "Ryan Hatch" },
-    { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },
-    { imgSrc: "/artists/artist-4.png", artistName: "Amber Rae" },
-    { imgSrc: "/artists/artist-1.png", artistName: "Andre Davis" },
-    { imgSrc: "/artists/artist-2.png", artistName: "Jay Lewis" },
   ];
 
   return (
