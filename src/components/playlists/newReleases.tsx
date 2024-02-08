@@ -27,11 +27,11 @@ const NewReleases = () => {
     { imgSrc: "/artists/artist-2.png", artistName: "Jay Lewis" },
   ];
   return (
-    <div className="pl-8 w-[70%] ">
+    <div className="pl-8  w-[100%]  md:w-[70%]">
       <p className="text-indigo-900 text-lg font-semibold cursor-pointer py-4 ">
         New Releases
       </p>
-      <div className="grid grid-cols-3 gap-6 overflow-auto mt-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2   md:grid-cols-3 gap-6 overflow-auto mt-4">
         {newReleases.map(({ imgSrc, artistName }, index) => {
           return (
             <div

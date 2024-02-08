@@ -1,6 +1,5 @@
 import Avatar from "../common/avatar";
 
-
 const RecommendedArtists = () => {
   const artistList = [
     { imgSrc: "/artists/artist-1.png", artistName: "Ryan Hatch" },
@@ -16,7 +15,7 @@ const RecommendedArtists = () => {
   ];
 
   return (
-    <div className="px-8  mr-8">
+    <div className="pl-8 pr-0 md:px-8 mr-0 md:mr-8">
       <p className="text-indigo-900 text-lg font-semibold cursor-pointer py-4 ">
         Recommended Artists
       </p>
@@ -44,5 +43,4 @@ const RecommendedArtists = () => {
   );
 };
 
-
-export default  RecommendedArtists;
+export default RecommendedArtists;

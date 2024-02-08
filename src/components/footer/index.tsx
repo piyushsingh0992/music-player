@@ -2,8 +2,6 @@ import Image from "next/image";
 import Avatar from "../common/avatar";
 import Player from "../musicPlayer";
 
-
-
 const Left = () => {
   return (
     <div
@@ -40,7 +38,7 @@ const Left = () => {
 const Right = () => {
   return (
     <div
-      className=" transition-opacity duration-300 ease-in-out"
+      className=" hidden md:block transition-opacity duration-300 ease-in-out"
       style={{ opacity: 1 }}
     >
       <Image
@@ -54,15 +52,15 @@ const Right = () => {
   );
 };
 export default function Footer() {
-  // 
+  //
 
   return (
     <div className="bg-gray-50 flex h-[15vh] w-[100vw] px-8 z-20">
-      <div className="w-[100%]  flex justify-between items-center">
+      <div className=" w-[100%]  flex justify-between items-center">
         <Left />
-        <div className="w-[40%]">
-     <Player/>
-     </div>
+        <div className="w-[80%] md:w-[40%]">
+          <Player />
+        </div>
         <Right />
       </div>
     </div>

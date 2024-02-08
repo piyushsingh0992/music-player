@@ -15,13 +15,14 @@ const Trending = () => {
   ];
 
   return (
-    <div className="pr-8 w-[30%]">
+    <div className="pl-8 md:pl-0 md:pr-8   w-[100%] md:w-[30%]">
       <p className="text-indigo-900 text-lg font-semibold cursor-pointer py-4">
         Trending
       </p>
       <div className="mt-2">
         {trending.map(({ imgSrc, artistName }, index) => (
           <div
+            role="button"
             key={`${artistName}-${index}`}
             onMouseEnter={() => setHoveredIndex(index as any)}
             onMouseLeave={() => setHoveredIndex(null)}
