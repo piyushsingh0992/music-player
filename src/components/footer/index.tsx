@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Avatar from "../common/avatar";
+import Player from "../musicPlayer";
+
+
 
 const Left = () => {
   return (
@@ -57,7 +60,9 @@ export default function Footer() {
     <div className="bg-gray-50 flex h-[15vh] w-[100vw] px-8">
       <div className="w-[100%]  flex justify-between items-center">
         <Left />
-        <p>Player</p>
+        <div className="w-[40%]">
+     <Player/>
+     </div>
         <Right />
       </div>
     </div>
