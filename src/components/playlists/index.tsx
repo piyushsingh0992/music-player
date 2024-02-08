@@ -44,16 +44,16 @@ const Search = () => {
 
 const RecommendedArtists = () => {
   const artistList = [
-    { imgSrc: "/sample-song.png", artistName: "Ryan Hatch" },
-    { imgSrc: "/sample-song.png", artistName: "Calvin Kay" },
-    { imgSrc: "/sample-song.png", artistName: "Amber Rae" },
-    { imgSrc: "/sample-song.png", artistName: "Andre Davis" },
-    { imgSrc: "/sample-song.png", artistName: "Jay Lewis" },
-    { imgSrc: "/sample-song.png", artistName: "Ryan Hatch" },
-    { imgSrc: "/sample-song.png", artistName: "Calvin Kay" },
-    { imgSrc: "/sample-song.png", artistName: "Amber Rae" },
-    { imgSrc: "/sample-song.png", artistName: "Andre Davis" },
-    { imgSrc: "/sample-song.png", artistName: "Jay Lewis" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Ryan Hatch" },
+    { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Amber Rae" },
+    { imgSrc: "/artists/artist-4.png", artistName: "Andre Davis" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Jay Lewis" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Ryan Hatch" },
+    { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },
+    { imgSrc: "/artists/artist-4.png", artistName: "Amber Rae" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Andre Davis" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Jay Lewis" },
   ];
 
   return (
@@ -66,13 +66,13 @@ const RecommendedArtists = () => {
           return (
             <div
               key={`${artistName}-${index}`}
-              className="flex-shrink-0 flex flex-col justify-start items-center"
+              className="flex-shrink-0 flex flex-col justify-between items-center "
             >
               <Avatar
                 src={imgSrc}
                 width="160"
                 height="200"
-                borderRadius="rounded-2xl"
+                borderRadius="rounded-2xl "
               />
               <p className="pt-4 text-indigo-900 text-xs font-semibold cursor-pointer">
                 {artistName}
@@ -87,16 +87,26 @@ const RecommendedArtists = () => {
 
 const NewReleases = () => {
   const newReleases = [
-    { imgSrc: "/sample-song.png", artistName: "Ryan Hatch" },
-    { imgSrc: "/sample-song.png", artistName: "Calvin Kay" },
-    { imgSrc: "/sample-song.png", artistName: "Amber Rae" },
-    { imgSrc: "/sample-song.png", artistName: "Andre Davis" },
-    { imgSrc: "/sample-song.png", artistName: "Jay Lewis" },
-    { imgSrc: "/sample-song.png", artistName: "Ryan Hatch" },
-    { imgSrc: "/sample-song.png", artistName: "Calvin Kay" },
-    { imgSrc: "/sample-song.png", artistName: "Amber Rae" },
-    { imgSrc: "/sample-song.png", artistName: "Andre Davis" },
-    { imgSrc: "/sample-song.png", artistName: "Jay Lewis" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Ryan Hatch" },
+    { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Amber Rae" },
+    { imgSrc: "/artists/artist-4.png", artistName: "Andre Davis" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Jay Lewis" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Ryan Hatch" },
+    { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },
+    { imgSrc: "/artists/artist-4.png", artistName: "Amber Rae" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Andre Davis" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Jay Lewis" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Ryan Hatch" },
+    { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Amber Rae" },
+    { imgSrc: "/artists/artist-4.png", artistName: "Andre Davis" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Jay Lewis" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Ryan Hatch" },
+    { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },
+    { imgSrc: "/artists/artist-4.png", artistName: "Amber Rae" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Andre Davis" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Jay Lewis" },
   ];
   return (
     <div className="pl-8 w-[70%] ">
@@ -114,7 +124,7 @@ const NewReleases = () => {
                 src={imgSrc}
                 width={70}
                 height={70}
-                borderRadius="rounded-xl"
+                borderRadius="rounded-xl h-16 w-16 overflow-hidden"
               />
               <div className="ml-2">
                 <p className="text-indigo-900 text-sm font-semibold cursor-pointer">
@@ -135,22 +145,32 @@ const NewReleases = () => {
 const Trending = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null); // Track the index of the hovered item
   const trending = [
-    { imgSrc: "/sample-song.png", artistName: "Ryan Hatch" },
-    { imgSrc: "/sample-song.png", artistName: "Calvin Kay" },
-    { imgSrc: "/sample-song.png", artistName: "Amber Rae" },
-    { imgSrc: "/sample-song.png", artistName: "Andre Davis" },
-    { imgSrc: "/sample-song.png", artistName: "Jay Lewis" },
-    { imgSrc: "/sample-song.png", artistName: "Ryan Hatch" },
-    { imgSrc: "/sample-song.png", artistName: "Calvin Kay" },
-    { imgSrc: "/sample-song.png", artistName: "Amber Rae" },
-    { imgSrc: "/sample-song.png", artistName: "Andre Davis" },
-    { imgSrc: "/sample-song.png", artistName: "Jay Lewis" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Ryan Hatch" },
+    { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Amber Rae" },
+    { imgSrc: "/artists/artist-4.png", artistName: "Andre Davis" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Jay Lewis" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Ryan Hatch" },
+    { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },
+    { imgSrc: "/artists/artist-4.png", artistName: "Amber Rae" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Andre Davis" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Jay Lewis" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Ryan Hatch" },
+    { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Amber Rae" },
+    { imgSrc: "/artists/artist-4.png", artistName: "Andre Davis" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Jay Lewis" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Ryan Hatch" },
+    { imgSrc: "/artists/artist-3.png", artistName: "Calvin Kay" },
+    { imgSrc: "/artists/artist-4.png", artistName: "Amber Rae" },
+    { imgSrc: "/artists/artist-1.png", artistName: "Andre Davis" },
+    { imgSrc: "/artists/artist-2.png", artistName: "Jay Lewis" },
   ];
 
   return (
     <div className="pr-8 w-[30%]">
       <p className="text-indigo-900 text-lg font-medium cursor-pointer py-4">
-       Trending
+        Trending
       </p>
       <div>
         {trending.map(({ imgSrc, artistName }, index) => (
@@ -162,13 +182,15 @@ const Trending = () => {
               hoveredIndex === index ? "bg-indigo-800" : "bg-white"
             }`}
           >
-            <Avatar
-              src={imgSrc}
-              width={70}
-              height={70}
-              borderRadius="rounded-full"
-            />
-            <div className="ml-4 flex justify-between items-between w-[100%] ">
+            <div className="w-[25%]">
+              <Avatar
+                src={imgSrc}
+                width="56"
+                height="56"
+                borderRadius="rounded-full h-12 w-12 "
+              />
+            </div>
+            <div className="flex justify-between items-between w-[75%]  ">
               <div>
                 <p
                   className={` ${
@@ -212,7 +234,7 @@ export default function Playlist() {
 
   return (
     <div className="bg-gray-200 w-[80vw]  h-[85vh] ">
-      <div className="flex justify-between items-center pt-10 h-[20%]">
+      <div className="flex justify-between items-center h-[20%]">
         <Routes />
         <Search />
       </div>

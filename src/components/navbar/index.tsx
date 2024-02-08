@@ -25,9 +25,10 @@ const Header = () => {
   return (
     <div className="flex justify-start items-center px-6 pt-8">
       <Avatar
-        src="https://source.unsplash.com/random/200x200?sig=1"
+        src="/avatar.png"
         width="36"
         height="36"
+        borderRadius="rounded-full h-12 w-12 overflow-hidden"
       />
       <p className="ml-4 text-indigo-900  text-xs font-semibold">
         Charlie-George baker
