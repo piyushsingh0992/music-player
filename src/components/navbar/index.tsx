@@ -1,31 +1,29 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, RefObject } from "react";
 import Header from "./header";
 import Lists from "./list";
 
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const navbarRef: RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const navbarRef = useRef(); // Create a ref for the Navbar
-
-  // Effect to add an event listener to the document
   useEffect(() => {
-    function handleClickOutside(event) {
-      // Check if the Navbar is open and if the click is outside the Navbar
-      if (isOpen && navbarRef.current && !navbarRef.current.contains(event.target)) {
-        setIsOpen(false); // Close the Navbar
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isOpen &&
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
       }
-    }
+    };
 
-    // Add click event listener
     document.addEventListener("mousedown", handleClickOutside);
 
-    // Cleanup the event listener on component unmount
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [isOpen]); // Effect dependencies
+  }, [isOpen]);
 
   return (
     <div className="relative w-0 md:w-[20vw]">
-      {/* Hamburger Menu */}
       <div className="flex justify-end -p-4 md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -37,14 +35,11 @@ export default function Navbar() {
             <rect y="30" width="100" height="20"></rect>
             <rect y="60" width="100" height="20"></rect>
           </svg>
-
-
         </button>
       </div>
 
-      {/* Navbar */}
       <div
-        ref={navbarRef} // Attach the ref here
+        ref={navbarRef}
         className={`${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } bg-gray-100 w-[80vw] md:w-[20vw] h-[85vh] overflow-x-auto shadow-2xl z-10 navbar-scrollbar-hide fixed top-0 left-0 transition-transform ease-in-out duration-300 md:relative md:translate-x-0`}
@@ -80,4 +75,6 @@ export default function Navbar() {
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;
